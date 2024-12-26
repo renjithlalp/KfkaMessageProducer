@@ -1,0 +1,24 @@
+server:
+  port: 7777
+  
+  
+spring:
+  application:
+      name: KfkaProducer
+      
+  kafka:
+    producer:
+      bootstrap-servers:
+      - localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      
+service:
+  topic: mysoftcornertopic
+  msgtopic: msgTopic
+        
+        
+camel:
+  component:
+      kafka:
+        brokers: localhost:9092
